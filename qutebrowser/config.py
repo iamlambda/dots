@@ -10,7 +10,7 @@ config.bind(',cd', 'spawn -d youtube-dl -P $HOME/dls {url}')
 config.bind(',d', 'hint links spawn -d youtube-dl -P $HOME/dls {hint-url}')
 config.bind(',od', 'open {url:domain}')
 config.bind(',Od', 'open -t {url:domain}')
-config.bind(',op', 'hint links spawn sh -c "curl '{hint-url}' | zathura -"')
+# config.bind(',op', """hint links spawn sh -c "curl '{hint-url}' | zathura -" """)
 config.bind(',w', 'config-cycle colors.webpage.bg "#fdf6e3" "#1e1e2e"')
 config.bind(',f', 'fullscreen')
 
