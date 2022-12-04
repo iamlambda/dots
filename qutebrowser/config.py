@@ -9,6 +9,10 @@ config.bind(',cm', 'spawn -d mpv {url}')
 config.bind(',cd', 'spawn -d youtube-dl -P $HOME/dls {url}')
 config.bind(',d', 'hint links spawn -d youtube-dl -P $HOME/dls {hint-url}')
 config.bind(',od', 'open {url:domain}')
+config.bind(',Od', 'open -t {url:domain}')
+config.bind(',op', 'hint links spawn sh -c "curl '{hint-url}' | zathura -"')
+config.bind(',w', 'config-cycle colors.webpage.bg "#fdf6e3" "#1e1e2e"')
+config.bind(',f', 'fullscreen')
 
 config.bind('j', 'search-next')
 config.bind('h', 'set-cmd-text -s :open')
@@ -29,7 +33,7 @@ c.content.notifications.enabled = False
 c.hints.chars = "arstgmneio"
 
 c.url.searchengines['gh'] = 'https://github.com/search?q={}'
-c.url.searchengines['yt'] = 'https://yewtu.be/search?q={}'
+c.url.searchengines['yt'] = 'https://invidious.snopyta.org/search?q={}'
 c.url.searchengines['aw'] = 'https://wiki.archlinux.org/index.php?search={}'
 
 c.fonts.default_family = "Source Code Pro"
