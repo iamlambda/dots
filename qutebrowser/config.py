@@ -44,6 +44,7 @@ c.fonts.web.family.fixed = "Source Code Pro"
 c.fonts.web.family.serif = "Source Code Pro"
 
 c.completion.shrink = True
+c.completion.height = "24%"
 
 c.colors.webpage.bg = "#fdf6e3"
 
