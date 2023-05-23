@@ -47,13 +47,16 @@ layoutHook' =  smartBorders (tiled ||| tC ||| simpleTabbed ||| Full)
         delta = 3/100
 
 manageHook' = composeAll
-    [ className =? "mpv" --> doShift "3"
+    [ 
+    insertPosition Master Newer
+    , className =? "mpv" --> doShift "8"
+    , className =? "firefox" --> doShift "4"
+    , className =? "qBittorrent" --> doShift "9"
     , className =? "Arandr" --> doCenterFloat
     , className =? "Sxiv" --> doCenterFloat
     , className =? "Xmessage" --> doCenterFloat
     , isDialog            --> doFloat
     , namedScratchpadManageHook scratchpads
-    , insertPosition Master Newer
     ]
 
 scratchpads = [
